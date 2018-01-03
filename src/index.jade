@@ -1,0 +1,63 @@
+extends _layouts/base
+
+block content
+    main.mavatec
+        section.mavatec__hero
+            .container
+                h1.mavatec__hero__title
+                    span Calidad que garantiza
+                    br
+                    | Confianza y Durabilidad.
+                .mavatec__hero__data
+                    a(href="mailto:contizaciones@mavatec.com.ar") contizaciones@mavatec.com.ar  
+                    | / 
+                    a(href="tel:11 4302 2109") (11) 4302 2109
+        
+        section.mavatec__tabs
+            .container
+                ul.row.mavatec__tabs__list.nopadding
+                    each tab in site.data.home.tabs
+                        li.col-xs-8.mavatec__tabs__tab(data-tab-target=tab.id)
+                            a.js-trigger(href="##{tab.id}")= tab.name
+                            
+                            
+            .mavatec__tabs__wrapper
+                article#tabiques-sanitarios.mavatec__tab(data-tab-index="tabiques-sanitarios")
+                    include _modules/tabs/tab1
+                
+                article#duchadores.mavatec__tab(data-tab-index="duchadores")
+                    include _modules/tabs/tab2
+                
+                article#tabiques-oficina.mavatec__tab(data-tab-index="tabiques-oficina")
+                    include _modules/tabs/tab3
+                    
+        section#cotizar.mavatec__cotizar
+            form.container(action="enviar.php", method="post", enctype="multipart/form-data")
+                .row
+                    .col-xs-24.col-md-8.mavatec__cotizar__data
+                        h2 COTIZAR
+                        p Email:
+                        a(href="mailto:cotizaciones@mavatec.com.ar") cotizaciones@mavatec.com.ar
+                        p Teléfono:
+                        a(href="tel:+541143022109") +54 11 4302 2109
+                    .col-xs-24.col-sm-12.col-md-8
+                        .mavatec__cotizar__formgroup
+                            label.mavatec__cotizar__label Nombre
+                            input.mavatec__cotizar__input(type="text")
+                        .mavatec__cotizar__formgroup
+                            label.mavatec__cotizar__label Email
+                            input.mavatec__cotizar__input(type="email")
+                        .mavatec__cotizar__formgroup
+                            label.mavatec__cotizar__label Teléfono
+                            input.mavatec__cotizar__input(type="text")
+                        .mavatec__cotizar__formgroup
+                            label.mavatec__cotizar__label Subí tu pliego en PDF
+                            input.mavatec__cotizar__input(type="file", accept="application/pdf")
+                        
+                    .col-xs-24.col-sm-12.col-md-8
+                        .mavatec__cotizar__formgroup
+                            label.mavatec__cotizar__label Consulta
+                            textarea.mavatec__cotizar__input.mavatec__cotizar__input--textarea
+                        .mavatec__cotizar__formgroup
+                            input.mavatec__producto(type="hidden", name="producto")
+                            input.mavatec__cotizar__submit(type="submit", value="ENVIAR")

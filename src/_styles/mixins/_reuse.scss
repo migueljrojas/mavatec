@@ -1,0 +1,110 @@
+@mixin trans($prop: all, $d: $duration, $e: $easing) {
+    transition: $prop $d $e;
+}
+
+@mixin title($size: $lg, $color: $white, $align: 'left') {
+    text-transform: uppercase;
+    font-size: $size;
+    color: $color;
+    text-align: #{$align};
+}
+
+@mixin padd($mode: both) {
+    @if $mode == both {
+
+        padding: 16% 0;
+
+        @include mq(sm){
+            padding: 12% 0;
+        }
+
+        @include mq(md){
+            padding: 8% 0;
+        }
+    }
+
+    @if $mode == top {
+
+        padding: 16% 0 0;
+
+        @include mq(sm){
+            padding: 12% 0 0;
+        }
+
+        @include mq(md){
+            padding: 8% 0 0;
+        }
+    }
+
+    @if $mode == bottom {
+
+        padding: 0 0 16%;
+
+        @include mq(sm){
+            padding: 0 0 12%;
+        }
+
+        @include mq(md){
+            padding: 0 0 8%;
+        }
+    }
+}
+
+@mixin overlay($level: .5, $zdex: 2) {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,$level);
+    z-index: $zdex;
+}
+
+@mixin close($color: $white, $size: 24px) {
+    position: absolute;
+    display: block;
+    width: $size;
+    height: $size;
+    cursor: pointer;
+    transform: rotate(45deg);
+
+    span{
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top:calc(50% - 1px);
+        background: $color;
+        display: block;
+
+        &:last-child {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+@mixin caret($point: up, $size: 20px, $color: $white) {
+    width: $size;
+    height: $size;
+    position: relative;
+    display: inline-block;
+
+    &:before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px solid $color;
+        border-left: 2px solid $color;
+        left:0;
+
+        @if $point == up {
+            top:60%;
+            transform: rotate(135deg);
+        }
+
+        @if $point == down {
+            bottom:10%;
+            transform: rotate(-45deg);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "tabs": [
+        {
+            "name":"Tabiques Sanitarios",
+            "id":"tabiques-sanitarios"
+        },
+        {
+            "name":"Duchadores",
+            "id":"duchadores"
+        },
+        {
+            "name":"Tabiques de Oficina",
+            "id":"tabiques-oficina"
+        }
+    ],
+    "normas1":[
+        "Autoportante",
+        "Antigraffiti",
+        "Anti vandalismo",
+        "Retardante de Fuego M2 / autoextinguible",
+        "Fácil Logística",
+        "Alta resistencia al agua y vapor",
+        "Alta resistencia al imapcto"
+    ],
+    "normas2":[
+        "Estabilidad de colores y diseños",
+        "Alta resistencia a la abrasión",
+        "Aislante eléctrico y térmico",
+        "Montaje sencillo",
+        "Alta resistencia a disolventes orgánicos",
+        "Alta resistencia a agentes químicos",
+        "Fácil mantenimiento"
+    ]
+}

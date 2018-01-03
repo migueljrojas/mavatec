@@ -1,0 +1,25 @@
+.header {
+    background: $black;
+    padding: 10px 0;
+
+    @include mq(sm){
+        padding: 20px 0;
+    }
+
+    &__logo {
+        text-align: center;
+
+        @include mq(sm){
+            text-align: left;
+        }
+
+        img {
+            height: 30px;
+            display: inline-block;
+
+            @include mq(sm){
+                height: 50px;
+            }
+        }
+    }
+}

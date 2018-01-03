@@ -1,0 +1,36 @@
+$white: #fff;
+$black: #000;
+$corpBlack: #3e372c;
+$darkestGray: #383838;
+$darkGray: #787871;
+$midGray: #999;
+$lightGray: #ebebeb;
+$lightestGray: #f4f7f8;
+$orange: #f7a600;
+
+$link: $orange;
+$linkHover: $link + #333;
+$text: $white;
+$textDark: $black;
+$accent: $orange;
+$bg: $white;
+$bgSecondary: $orange;
+$bgDark: $black;
+
+$base: 40px;
+$radius: 20px;
+
+$head: 60px;
+$xxl: 36px;
+$xl: 24px;
+$lg: 21px;
+$md: 18px;
+$sm: 16px;
+$xs: 14px;
+$xxs: 12px;
+
+$duration: 0.3s;
+$easing: cubic-bezier(.785, .135, .15, .86);
+$easingLight: ease;
+
+$mainFont: 'Helvetica', sans-serif;

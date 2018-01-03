@@ -1,0 +1,40 @@
+$sm-min: 768px;
+$md-min: 992px;
+$lg-min: 1200px;
+
+
+@mixin mq($class, $mode: false) {
+    @if $class == xs {
+        @media ( max-width: $sm-min - 1px ) { @content; }
+    }
+
+    @else if $class == sm {
+        @if $mode == only {
+            @media ( min-width: $sm-min ) and ( max-width: $md-min - 1px ) { @content; }
+        }
+        @else {
+            @media ( min-width: $sm-min ) { @content; }
+        }
+    }
+
+    @else if $class == md {
+        @if $mode == only {
+            @media ( min-width: $md-min ) and ( max-width: $lg-min - 1px ) { @content; }
+        }
+        @else {
+            @media ( min-width: $md-min ) { @content; }
+        }
+    }
+
+    @else if $class == lg {
+        @media ( min-width: $lg-min ) { @content; }
+    }
+
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+@mixin customMq($min, $max:1920px) {
+    @media (min-width: $min) and (max-width: $max) { @content; }
+}

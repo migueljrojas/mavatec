@@ -1,0 +1,53 @@
+.mavatec__tab__section.mavatec__tab__section--mtbasic
+    .container
+        .row
+            .col-xs-24.col-sm-12.col-md-8
+                .mavatec__tab__content
+                    h2
+                        | MTBASIC
+                        span._reg &reg;
+                    p Placas fenólicas sólidas compactas de varios colores y espesores.
+                    p Divisores interiores y paneles frontales de varias medidas. Con o sin puerta. Estos paneles encastran en una “U” de aluminio anodizado natural. Las placas se fijan a la pared con escuadras de Acero Inoxidable y el encuentro de divisores interiores con los paneles frontales también con estas escuadras.Tanto la tornilleria como las tuercas ciegas son todos en Acero Inoxidable.
+                    p En la parte superior lleva un travesaño de pared a pared en aluminio anodizado natural.
+                    
+                    a.mavatec__button(href="#cotizar") Cotizar
+                    
+.mavatec__tab__section.mavatec__tab__section--normas
+    .container
+        .row
+            .col-xs-24.col-md-8
+                .mavatec__tab__content
+                    h3 Normas de calidad:
+                    ul
+                        li EN 438 European standard
+                        li Nema LD3 American standard
+                        li ISO 9001
+                    
+            .col-xs-24.col-sm-12.col-md-8
+                ul.mavatec__tab__normas
+                    each item in site.data.home.normas1
+                        li
+                            i.fa.fa-check  
+                            | #{item}
+                    
+            .col-xs-24.col-sm-12.col-md-8
+                ul.mavatec__tab__normas
+                    each item in site.data.home.normas2
+                        li
+                            i.fa.fa-check  
+                            | #{item}
+            
+    
+                    
+.mavatec__tab__section.mavatec__tab__section--mtice
+    .container
+        .row
+            .col-xs-24.col-sm-12.col-md-8.pull-right
+                .mavatec__tab__content
+                    h2
+                        | MTICE
+                        span._reg &reg;
+                    p Duchadores en vidrio templado y esmerilado de 10mm con puertas y bisagras de pivotacion de 0 a 180º.
+                    p Parantes frontales de aluminio anodizado, paños fijos y divisores interiores de vidrio.
+                    
+                    a.mavatec__button(href="#cotizar") Cotizar

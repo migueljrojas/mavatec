@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=BioRhyme:300,700|Oswald:200,400,600');
+
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+@import 'bower_components/font-awesome/scss/font-awesome';
+@import 'typography';
+@import 'bootstrap';
+
+// Import Modules
+@import 'mixins';
+@import 'modules';
+@import 'pages';
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a{
+    @include trans;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+._reg{
+    font-size: .4em;
+}
+
+.home {
+    background: url('/images/back.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+    font-family: 'BioRhyme', serif;
+    font-weight: 300;
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 200;
+        font-size: 28px;
+        margin-bottom: 20px;
+
+        @include mq(sm){
+            font-size: 44px;
+        }
+    }
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        background: rgba(0,0,0,.8);
+    }
+
+    &__logo {
+        img{
+            max-width: 90%;
+            margin: auto;
+        }
+    }
+
+    &__text{
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto 20px;
+
+        @include mq(sm){
+            font-size: 21px;
+        }
+
+        &--promo{
+            color:#ff9933;
+        }
+    }
+
+    &__social{
+        @include trans;
+
+        font-size: 21px;
+        color: #fff;
+        margin-bottom: 15px;
+
+        &:hover{
+            color: #ffaa44;
+            text-decoration: none;
+        }
+
+        i{
+            color: #ff9933;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid;
+            line-height: 38px;
+            margin-right: 10px;
+            font-size: 21px;
+        }
+
+        @include mq(sm){
+            font-size: 24px;
+        }
+    }
+}

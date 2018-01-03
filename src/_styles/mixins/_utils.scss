@@ -1,0 +1,56 @@
+.-hide {
+    display: none!important;
+}
+
+.-hideOverflow {
+    overflow: hidden;
+}
+
+.-static{
+    position: static;
+}
+
+.-blur {
+    filter: blur(7px);
+}
+
+.nopadding > [class*="col-"] {
+     padding-left: 0 !important;
+     padding-right: 0 !important;
+}
+
+.nopadding-xs > [class*="col-"] {
+    @include mq(xs){
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.-vertical-space{
+    padding-top: $base;
+    padding-bottom: $base;
+
+    &-top {
+        padding-top: $base;
+    }
+
+    &-bottom {
+        padding-bottom: $base;
+    }
+}
+
+.embed-responsive.-map{
+    padding-bottom: 56.25%;
+
+    @include mq(sm){
+        padding-bottom: 45%;
+    }
+
+    @include mq(md){
+        padding-bottom: 30%;
+    }
+}
+
+[data-parallax]{
+    position: relative;
+}
